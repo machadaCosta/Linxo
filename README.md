@@ -30,18 +30,18 @@ Component Architecture:
 * _Coroutines_
 
 ## To improve
--> 
-
-## Time
-| Time | Task |
-|------|------|
-|1 hour | Creating Hello Linxo! |
-|3 hours| Developing first screen |
+-> Add a setting screen to explore _compose_ interest
 
 ## Organization
 To deal with this project, I plan:
 * put in place the **component architecture** (sem. 20)
 * develop the second screen (sem. 21)
+
+
+| Time | Task |
+|------|------|
+|1 hour | Creating Hello Linxo! |
+|3 hours| Developing first screen |
 
 [Macha DA COSTA on LinkedIn](https://www.linkedin.com/in/MachaDaCosta/)
 
@@ -49,4 +49,3 @@ To deal with this project, I plan:
 [developer.android.com: Android Development with Kotlin lessons](https://developer.android.com/courses/android-development-with-kotlin/course?utm_source=dac&utm_medium=website&utm_campaign=edu)
 
 [Kotlin for Android App by Da Costa](https://www.chillcoding.com/app/kotlin-for-android/)
-
