@@ -16,7 +16,7 @@ Note: An album has a _name_, an _author_ and a _gallery_, which is a set of _pho
 * photos: [https://jsonplaceholder.typicode.com/photos](https://jsonplaceholder.typicode.com/photos)
 
 ## Libraries
-* _Retrofit_ for network communication, exchange data with a third party.
+* [_Retrofit_](https://square.github.io/retrofit/) for network communication, exchange data with a third party.
 * _Picasso_ for displaying images from the web, it's light and simple (no need to use _Glide_).
 
 ## Good Practices
