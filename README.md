@@ -16,7 +16,7 @@ Note: An album has a _name_, an _author_ and a _gallery_, which is a set of _pho
 ## Libraries
 * [_Retrofit_](https://square.github.io/retrofit/) for network communication, it's a safe-type HTTP client.
 * [_Moshi_](https://github.com/square/retrofit/tree/master/retrofit-converters/moshi) for converting JSON into _Kotlin_ objects (there is also _Gson_, _Moshi_ is used in the official codelab cd. References 1 lesson 9).
-* _Picasso_ for displaying images from the web, it's light and simple (no need to use _Glide_).
+* [_Picasso_](https://github.com/square/picasso) for displaying images from the web, it's light and simple (no need to use _Glide_ which is useful for _.gif_ and loading optimization).
 * [_Timber_](https://github.com/JakeWharton/timber) for logging, it's generate log tag and avoid showing logs in a release version.
 
 ## Good Practices
