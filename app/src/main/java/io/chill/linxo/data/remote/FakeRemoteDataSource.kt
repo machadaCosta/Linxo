@@ -2,6 +2,7 @@ package io.chill.linxo.data.remote
 
 import com.squareup.moshi.Moshi
 import io.chill.linxo.data.Album
+import io.chill.linxo.data.User
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -22,5 +23,9 @@ object FakeRemoteDataSource {
     suspend fun getAlbums():List<Album>{
         val albums = retrofitService.getAlbums()
         return albums
+    }
+
+    suspend fun getAuthors():List<User>{
+        return retrofitService.getUsers()
     }
 }

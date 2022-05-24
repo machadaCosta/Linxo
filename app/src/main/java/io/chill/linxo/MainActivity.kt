@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel.list.observe(this) {
             for (album in it)
-                Timber.i("This is an album from server:$album")
+                Timber.i("This is an album from server: $album")
         }
     }
 }
