@@ -14,15 +14,14 @@ Note: An album has a _name_, an _author_ and a _gallery_, which is a set of _pho
 [Fake API: jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/)
 
 ## Libraries
-* [_Retrofit_](https://square.github.io/retrofit/) for network communication, it's a safe-type HTTP client.
-* [_Moshi_](https://github.com/square/retrofit/tree/master/retrofit-converters/moshi) for converting JSON into _Kotlin_ objects (there is also _Gson_, _Moshi_ is used in the official codelab cd. References 1 lesson 9).
-* [_Picasso_](https://github.com/square/picasso) for displaying images from the web, it's light and simple (no need to use _Glide_ which is useful for _.gif_ and loading optimization).
+* [_Retrofit_](https://square.github.io/retrofit/) for network communication, exchange data with a third party.
+* [_Moshi_](https://github.com/square/retrofit/tree/master/retrofit-converters/moshi) for converting JSON into _Kotlin_ objects (there is also [_Gson_](https://github.com/google/gson), _Moshi_ is used in the official codelab cf. **References** 1 lesson 9).
+* [_Picasso_](https://github.com/square/picasso) for displaying images from the web, it's light and simple (no need to use [_Glide_](https://github.com/bumptech/glide) which is useful for _.gif_ and loading optimization).
 * [_Timber_](https://github.com/JakeWharton/timber) for logging, it's generate log tag and avoid showing logs in a release version.
 
 ## Good Practices
 
-The _MAD_ architecture, Architecture Components:
-* Network data source in the data layer
+The _MAD_ architecture, Architecture Components, is put in place:
 * **MVVM** Model View ViewModel
 * _Navigation_
 * _View Binding_
@@ -31,26 +30,31 @@ The _MAD_ architecture, Architecture Components:
 
 Note: _MAD_ stands for _Modern Android Development_
 
+See [Documentation of Linxo R & D Project](https://github.com/machadaCosta/Linxo/wiki/Documentation) for more information.
+
 ## To improve
 -> Add a setting screen to explore _compose_ interest (using [_DataStore_](https://developer.android.com/topic/libraries/architecture/datastore))
 
 ## Organization
 To deal with this project, I plan:
-* put in place the **MAD Architecture** (sem. 20)
+* put in place the **MAD architecture** (sem. 20)
 * develop the second screen (sem. 21)
 
 
 | Time | Task |
 |------|------|
+| **sem. 20**| **Developing the first screen: v1**|
 |1 hour | Creating Hello Linxo! |
 |1 hour | Setting up the _MAD_ architecture |
 |2 hours| Developing _data layer_ v0 with _MVVM_ |
 |2 hours | Writing Documentation |
-|n hours| **TO DO** |
+| **sem. 21**| **Developing the second screen: v2**|
 |1 hour| Developing _data layer_ v1 |
 |1 hour| Developing _UI layer_: first screen (v1) |
+|1 hour| Developing _UI layer_: second screen (v2) |
+|1 hour| Updating Documentation |
+| **N hours**| **Finishing the second screen**|
 |1 hour| Developing _data layer_ v2 |
-|1 hour| Developing _UI layer_: first screen (v2) |
 |1 hour| Updating Documentation |
 
 
