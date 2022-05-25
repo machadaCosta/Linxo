@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/content_line_default_size"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/albumName"
-        style="@style/TextAppearance.AppCompat.Title"
+    <LinearLayout
+        android:id="@+id/album"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="@dimen/content_line_default_size"
+        android:onClick="@{() -> clickListener.onClick(albumId)}"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/albumAuthor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_person" />
+        <TextView
+            android:id="@+id/albumName"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/line_default_size"
-        android:background="@color/linxo_dark" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/albumAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_person" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_default_size"
+            android:background="@color/linxo_dark" />
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="io.chill.linxo.albums.AlbumListener" />
+
+        <variable
+            name="albumId"
+            type="int" />
+    </data>
+</layout>

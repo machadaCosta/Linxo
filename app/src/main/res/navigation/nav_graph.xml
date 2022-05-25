@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/albumFragment">
+
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="io.chill.linxo.albums.AlbumsFragment"
+        android:label="AlbumFragment">
+        <action
+            android:id="@+id/action_albumFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="io.chill.linxo.gallery.GalleryFragment"
+        android:label="GalleryFragment">
+        <argument
+            android:name="albumId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
