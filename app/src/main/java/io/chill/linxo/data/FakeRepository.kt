@@ -21,7 +21,8 @@ class FakeRepository(private val fakeDataSource: FakeRemoteDataSource) {
         for (album in albumList) {
             album.author = getAuthor(album.userId)
         }
-        return albumList
+        // sort alphabetically the list before return it
+        return albumList.sortedBy { it.title }
     }
 
     private suspend fun getAuthors() {
