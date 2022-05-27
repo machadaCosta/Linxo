@@ -4,11 +4,13 @@
 # Linxo R & D
 This app is the result of a **Linxo Coding Exercise**.
 
-In brief, there is two screens:
+In brief, there are two screens:
  * Album list
  * Gallery
 
 Note: An album has a _name_, an _author_ and a _gallery_, which is a set of _photos_.
+
+![GIF demo](app/src/main/linxo-demo-app.gif)
 
 ## API
 [Fake API: jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/)
@@ -33,7 +35,7 @@ Note: _MAD_ stands for _Modern Android Development_
 See [Documentation of Linxo R & D Project](https://github.com/machadaCosta/Linxo/wiki/Documentation) for more information.
 
 ## To improve
--> Add a setting screen to explore _compose_ interest (using [_DataStore_](https://developer.android.com/topic/libraries/architecture/datastore))
+-> Add a screen of settings to explore _compose_ interest (using [_DataStore_](https://developer.android.com/topic/libraries/architecture/datastore))
 
 ## Organization
 To deal with this project, I plan:
@@ -49,12 +51,14 @@ To deal with this project, I plan:
 |2 hours| Developing _data layer_ v0 with _MVVM_ |
 |2 hours | Writing Documentation |
 | **sem. 21**| **Developing the second screen: v2**|
-|1 hour| Developing _data layer_ v1 |
+|1 hour| Developing _data layer_ (v1) |
 |1 hour| Developing _UI layer_: first screen (v1) |
-|1 hour| Developing _UI layer_: second screen (v2) |
+|1 hour| Developing _UI layer_: navigation to the second screen (v2) |
 |1 hour| Updating Documentation |
-| **N hours**| **Finishing the second screen**|
-|1 hour| Developing _data layer_ v2 |
+| **N hours**| **Finishing the app**|
+|1 hour| Developing _data layer_ (v2) |
+|1 hour| Developing _UI layer_: second screen (v2) |
+|1 hour| Adding tests |
 |1 hour| Updating Documentation |
 
 
