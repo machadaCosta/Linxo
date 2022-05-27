@@ -1,4 +1,4 @@
-package io.chill.linxo
+package io.chill.linxo.albums
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,7 +8,7 @@ import io.chill.linxo.data.Album
 import io.chill.linxo.data.FakeRepository
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val repo: FakeRepository) : ViewModel() {
+class AlbumsViewModel(private val repo: FakeRepository) : ViewModel() {
 
     private val _list = MutableLiveData<List<Album>>()
     val list: LiveData<List<Album>>

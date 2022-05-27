@@ -5,7 +5,7 @@ import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.savedstate.SavedStateRegistryOwner
-import io.chill.linxo.MainViewModel
+import io.chill.linxo.albums.AlbumsViewModel
 import io.chill.linxo.data.FakeRepository
 
 
@@ -19,8 +19,8 @@ class ViewModelFactory constructor(
         handle: SavedStateHandle
     ) = with(modelClass) {
         when {
-            isAssignableFrom(MainViewModel::class.java) ->
-                MainViewModel(fakeRepository)
+            isAssignableFrom(AlbumsViewModel::class.java) ->
+                AlbumsViewModel(fakeRepository)
             else ->
                 throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }

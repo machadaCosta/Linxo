@@ -4,11 +4,11 @@ import io.chill.linxo.data.remote.FakeRemoteDataSource
 
 class FakeRepository(private val fakeDataSource: FakeRemoteDataSource) {
 
-    var albumList = emptyList<Album>()
+    private var albumList = emptyList<Album>()
 
     // Creating an Hash Map with an estimated capacity
     // (this capacity can be changed by adding elements)
-    var authorList = HashMap<Int, String>(10)
+    private var authorList = HashMap<Int, String>(10)
 
     /* v0: suspend fun getAlbums() = fakeDataSource.getAlbums()
     * v1: get the album list for UI

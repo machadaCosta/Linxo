@@ -21,8 +21,7 @@ object FakeRemoteDataSource {
     }
 
     suspend fun getAlbums():List<Album>{
-        val albums = retrofitService.getAlbums()
-        return albums
+        return retrofitService.getAlbums()
     }
 
     suspend fun getAuthors():List<User>{

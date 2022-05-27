@@ -7,16 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import io.chill.linxo.MainViewModel
 import io.chill.linxo.databinding.FragmentAlbumsBinding
 import io.chill.linxo.util.getViewModelFactory
 
-class AlbumsFragment() : Fragment() {
+class AlbumsFragment : Fragment() {
 
     private var _binding: FragmentAlbumsBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel by viewModels<MainViewModel> { getViewModelFactory() }
+    private val viewModel by viewModels<AlbumsViewModel> { getViewModelFactory() }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,7 +29,7 @@ class AlbumsFragment() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Create the adpater with click Listener
+        // Create the adapter with click Listener
         val albumAdapter = AlbumsAdapter(AlbumListener { albumId ->
             // action from nav_graph.xml with arguments
             val action = AlbumsFragmentDirections.actionAlbumFragmentToGalleryFragment(albumId)
