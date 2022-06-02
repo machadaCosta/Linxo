@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.savedstate.SavedStateRegistryOwner
 import io.chill.linxo.albums.AlbumsViewModel
 import io.chill.linxo.data.FakeRepository
+import io.chill.linxo.gallery.GalleryViewModel
 
 
 class ViewModelFactory constructor(
@@ -21,6 +22,8 @@ class ViewModelFactory constructor(
         when {
             isAssignableFrom(AlbumsViewModel::class.java) ->
                 AlbumsViewModel(fakeRepository)
+            isAssignableFrom(GalleryViewModel::class.java) ->
+                GalleryViewModel(fakeRepository, handle)
             else ->
                 throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }

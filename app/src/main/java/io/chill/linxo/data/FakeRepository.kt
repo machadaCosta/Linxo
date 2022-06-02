@@ -10,6 +10,10 @@ class FakeRepository(private val fakeDataSource: FakeRemoteDataSource) {
     // (this capacity can be changed by adding elements)
     private var authorList = HashMap<Int, String>(10)
 
+    private var photoList = emptyList<Photo>()
+
+    private var galleryList = HashMap<Int, List<Photo>>(100)
+
     /* v0: suspend fun getAlbums() = fakeDataSource.getAlbums()
     * v1: get the album list for UI
     *  that is to say the author name (user name in the Fake API)
@@ -32,4 +36,14 @@ class FakeRepository(private val fakeDataSource: FakeRemoteDataSource) {
 
     private fun getAuthor(id: Int) = authorList[id]
 
+    fun getGallery(albumId: Int): List<Photo>? {
+        if (galleryList[albumId].isNullOrEmpty())
+            galleryList[albumId] = photoList.filter { it.albumId == albumId }
+        return galleryList[albumId]
+    }
+
+    suspend fun getPhotos() {
+        if (photoList.isEmpty())
+            photoList = fakeDataSource.getPhotos()
+    }
 }

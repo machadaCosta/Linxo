@@ -26,5 +26,17 @@ class AlbumsViewModel(private val repo: FakeRepository) : ViewModel() {
                 _list.value = emptyList()
             }
         }
+        // Send the request to get the photos in time
+        getGalleries()
     }
+
+    private fun getGalleries() {
+        viewModelScope.launch {
+            try {
+                repo.getPhotos()
+            } catch (e: Exception) {
+            }
+        }
+    }
+
 }

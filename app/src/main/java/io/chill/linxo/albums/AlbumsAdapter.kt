@@ -8,6 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import io.chill.linxo.data.Album
 import io.chill.linxo.databinding.ItemAlbumBinding
 
+/**
+ * Adapter with :
+ * a diff call back to optimize the refreshing
+ * a click listener to handle click on item, using dataBinding (cf. the xml layout)
+ */
 class AlbumsAdapter(val clickListener: AlbumListener) :
     ListAdapter<Album, AlbumsAdapter.ViewHolder>(AlbumDiffCallback()) {
 

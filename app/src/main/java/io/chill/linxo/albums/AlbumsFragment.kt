@@ -22,8 +22,8 @@ class AlbumsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        //!\ light binding in comparison with official documentation
-        _binding = FragmentAlbumsBinding.inflate(layoutInflater)
+        // view binding in fragment
+        _binding = FragmentAlbumsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -38,8 +38,7 @@ class AlbumsFragment : Fragment() {
         // Initialize the recyclerview of albums
         binding.albumsRecyclerview.adapter = albumAdapter
         viewModel.list.observe(viewLifecycleOwner) {
-            for (album in it)
-                albumAdapter.submitList(it)
+            albumAdapter.submitList(it)
         }
     }
 
