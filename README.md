@@ -34,8 +34,16 @@ Note: _MAD_ stands for _Modern Android Development_
 
 See [Documentation of Linxo R & D Project](https://github.com/machadaCosta/Linxo/wiki/Documentation) for more information.
 
-## To improve
+## To improve, suggestions
 -> Add a screen of settings to explore _compose_ interest (using [_DataStore_](https://developer.android.com/topic/libraries/architecture/datastore))
+
+-> Add tests
+
+-> Use _Hint_ for _Dependency Injection_ and remove the ViewModelFactory
+
+-> Optimize the requests progress
+
+-> Improve the UI of second screen with _Compose_
 
 ## Organization
 To deal with this project, I plan:
@@ -55,10 +63,8 @@ To deal with this project, I plan:
 |1 hour| Developing _UI layer_: first screen (v1) |
 |1 hour| Developing _UI layer_: navigation to the second screen (v2) |
 |1 hour| Updating Documentation |
-| **N hours**| **Finishing the app**|
-|1 hour| Developing _data layer_ (v2) |
-|1 hour| Developing _UI layer_: second screen (v2) |
-|1 hour| Adding tests |
+| **sem. 22**| **Finishing the app**|
+|1 hour| Developing _data layer_ and _UI layer_: second screen (v2) |
 |1 hour| Updating Documentation |
 
 
