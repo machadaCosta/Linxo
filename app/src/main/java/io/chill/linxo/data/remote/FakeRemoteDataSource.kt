@@ -17,19 +17,19 @@ object FakeRemoteDataSource {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
-    private val retrofitService : FakeAPIService by lazy {
+    private val retrofitService: FakeAPIService by lazy {
         retrofit.create(FakeAPIService::class.java)
     }
 
-    suspend fun getAlbums():List<Album>{
+    suspend fun getAlbums(): List<Album> {
         return retrofitService.getAlbums()
     }
 
-    suspend fun getAuthors():List<User>{
+    suspend fun getAuthors(): List<User> {
         return retrofitService.getUsers()
     }
 
-    suspend fun getPhotos():List<Photo>{
+    suspend fun getPhotos(): List<Photo> {
         return retrofitService.getPhotos()
     }
 }

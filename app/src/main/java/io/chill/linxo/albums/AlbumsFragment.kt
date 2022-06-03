@@ -12,8 +12,7 @@ import io.chill.linxo.util.getViewModelFactory
 
 class AlbumsFragment : Fragment() {
 
-    private var _binding: FragmentAlbumsBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentAlbumsBinding
 
     private val viewModel by viewModels<AlbumsViewModel> { getViewModelFactory() }
 
@@ -23,7 +22,7 @@ class AlbumsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // view binding in fragment
-        _binding = FragmentAlbumsBinding.inflate(inflater, container, false)
+        binding = FragmentAlbumsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -40,10 +39,5 @@ class AlbumsFragment : Fragment() {
         viewModel.list.observe(viewLifecycleOwner) {
             albumAdapter.submitList(it)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
